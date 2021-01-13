@@ -24,6 +24,19 @@ export default {
   }),
 
   methods: {
+    async loadData () {      
+      try {
+        const apiResp = await axios.get(`${API_BASE}/list/top10`)
+        const data = apiResp.data
+
+        return {
+          ...data,
+        }
+      } catch (err) {
+        console.log(err)
+        // catch err
+      }
+    },
   },
 }
 </script>
