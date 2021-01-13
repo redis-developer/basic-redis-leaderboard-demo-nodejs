@@ -1,0 +1,33 @@
+{
+  "name": "github-redis-company-marketcap",
+  "version": "0.0.1",
+  "description": "Top 100 countries using marketcap",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "redis",
+    "nodejs",
+    "example",
+    "github",
+    "leaderboard",
+    "marketcap",
+    "company",
+    "top"
+  ],
+  "author": "adrphlhome",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "redis": "^3.0.2"
+  },
+  "engines": {
+    "node": "12.x"
+  }
+}
