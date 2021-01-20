@@ -26,7 +26,7 @@ Show how the redis works with NodeJS, Express.
 
 ## How it works?
 
-![How it works](docs/screenshot001.png)
+<!-- ![How it works](docs/screenshot001.png) -->
 
 ## How to run it locally?
 
