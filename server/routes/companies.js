@@ -13,9 +13,12 @@ module.exports.getList = async (req, res, next) => {
     const symbols = ranks.map(r => r.symbol);
     const companies = await Promise.all(symbols.map(companyDb.getBySymbol));
 
+
     const results = companies.map((company, index) => ({
       ...company,
       marketCap: ranks[index].marketCap,
+      rank: ranks[index].rank,
+      symbol: symbols[index],
     }))
     res.json(results);
   } catch (err) {
