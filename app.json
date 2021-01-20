@@ -1,9 +1,9 @@
 {
-  "name": "Redis Cache Example",
-  "description": "Fetching number of github repos using NodeJS and Redis",
+  "name": "Basic Redis Leaderboard Demo NodeJS",
+  "description": "List of top 100 companies",
   "repository": "https://github.com/",
   "logo": "https://redis.io/images/redis-white.png",
-  "keywords": ["node", "express", "redis"],
+  "keywords": ["node", "express", "redis", "leadboard"],
   "env": {
 		"REDIS_ENDPOINT_URI": {
 	  	"description": "Redis server URI",

@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "siteName": {
-        "defaultValue": "node-redis-example",
+        "defaultValue": "basic-redis-leaderboard-demo-nodejs",
         "type": "string"
       },
       "hostingPlanName": {
