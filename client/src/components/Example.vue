@@ -63,8 +63,20 @@
             {{ item.rank }}
           </template>
           <template v-slot:item.company="{ item }">
-            <div class="">{{ item.company }}</div>
-            <div class="grey--text">{{ item.symbol.toUpperCase() }}</div>
+            <div class="d-flex align-center my-2">
+              <div>
+                <img
+                  :src="`https://companiesmarketcap.com//img/company-logos/80/${item.symbol.toUpperCase()}.png`"
+                  width="40"
+                  height="40"
+                  class="mr-3"
+                />
+              </div>
+              <div>
+                <div class="">{{ item.company }}</div>
+                <div class="grey--text">{{ item.symbol.toUpperCase() }}</div>
+              </div>
+            </div>
           </template>
           <template v-slot:item.marketCap="{ item }">
             <div class="">{{ formatUSD(item.marketCap) }}</div>
@@ -84,6 +96,45 @@
         </v-btn>
       </v-col>
     </v-row>
+    <v-row class="my-5">
+      <v-expansion-panels
+        v-model="panel"
+        multiple
+      >
+        <v-expansion-panel>
+          <v-expansion-panel-header>How the data is stored:</v-expansion-panel-header>
+          <v-expansion-panel-content> 
+            <ol>
+              <li>The company data is stored in a hash like below:
+                <pre>HSET "company:AAPL" symbol "AAPL" market_cap "2600000000000" country USA  </pre>
+               </li>
+              <li>The Ranks are stored in a ZSET. 
+                <pre>ZADD companyLeaderboard 2600000000000 company:AAPL</pre>
+              </li>
+            </ol>
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+
+        <v-expansion-panel>
+          <v-expansion-panel-header>How the data is accessed:</v-expansion-panel-header>
+          <v-expansion-panel-content>
+            <ol>
+              <li>Top 10 companies: zrevrange companyLeaderboard 0 9 WITHSCORES </li>
+              <li>All companies: zrevange companyLeaderboard 0 -1 WITHSCORES </li>
+              <li>Bottom 10 companies: zrange companyLeaderboard 0 9 WITHSCORES</li>
+              <li>Between rank 10 and 15: zrevange companyLeaderboard 9 14 WITHSCORES </li>
+              <li>Show ranks of AAPL, FB and TSLA: ZMSCORE companyLeaderBoard company:AAPL company:FB company:TSLA </li>
+              <li>Pagination: Show 1st 10 companies: ZSCAN 0 companyLeaderBoard COUNT 10 7.Pagination: Show next 10 companies: ZSCAN &lt;return value from the 1st 10 companies&gt; companyLeaderBoard COUNT 10 </li>
+              <li>Adding market cap to companies: ZINCRBY companyLeaderBoard 1000000000 "company:FB"</li>
+              <li>Reducing market cap to companies: ZINCRBY companyLeaderBoard -1000000000 "company:FB"</li>
+              <li>Companies over a Trillion: ZCOUNT companyLeaderBoard 1000000000000 +inf </li>
+              <li># companies between 500 billion and 1 trillion: ZCOUNT companyLeaderBoard 500000000000 1000000000000</li>
+            </ol>
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
+
+    </v-row>
   </v-container>
 </template>
 
@@ -91,8 +142,8 @@
 import axios from 'axios'
 
 const API_BASE = location.hostname === 'localhost'
-  ? 'http://localhost:5000'
-  : location.origin
+  ? 'http://localhost:5000/api'
+  : location.origin + '/api'
 
 const TRILLION = 1000 * 1000 * 1000 * 1000;
 const BILLION = 1000 * 1000 * 1000;

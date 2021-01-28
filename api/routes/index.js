@@ -2,9 +2,9 @@ const companies = require('./companies');
 const ranks = require('./ranks');
 
 module.exports = app => {
-  app.get('/list/:method', companies.getList);
-  app.get('/rank/update', ranks.update);
-  app.get('/rank/reset', ranks.reset);
+  app.get('/api/list/:method', companies.getList);
+  app.get('/api/rank/update', ranks.update);
+  app.get('/api/rank/reset', ranks.reset);
 
   app.use((err, req, res, next) => {
     err.statusCode = err.statusCode ? err.statusCode : 413;

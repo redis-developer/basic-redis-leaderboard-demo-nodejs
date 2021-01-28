@@ -7,12 +7,12 @@ const PORT = process.env.PORT || 5000;
 
 const app = express();
 
-const { seedDb } = require('./server/db');
+const { seedDb } = require('./db');
 
 // Setup routes
-app.use('/', express.static(path.join(__dirname, 'client/dist')));
+app.use('/', express.static(path.join(__dirname, '../public')));
 app.use(cors());
-require('./server/routes')(app);
+require('./routes')(app);
 
 // Seed redis db
 seedDb();
