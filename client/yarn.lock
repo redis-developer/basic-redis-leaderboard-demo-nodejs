@@ -2721,6 +2721,11 @@ cosmiconfig@^5.0.0:
     js-yaml "^3.13.1"
     parse-json "^4.0.0"
 
+country-flags-svg@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/country-flags-svg/-/country-flags-svg-1.1.0.tgz#6ea25268ff51c8c1c162824cc24fbb4f21c9fccf"
+  integrity sha512-CK48QE+q2G+vR99+acaNZM7qYeMcbLT8IdDGuLXG3hnoLM5soGWPAdAjfSAeCV0ciUB/uvqkJynFZ2FQ4mZ9rQ==
+
 create-ecdh@^4.0.0:
   version "4.0.4"
   resolved "https://registry.npm.taobao.org/create-ecdh/download/create-ecdh-4.0.4.tgz?cache=0&sync_timestamp=1596557512048&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcreate-ecdh%2Fdownload%2Fcreate-ecdh-4.0.4.tgz#d6e7f4bffa66736085a0762fd3a632684dabcc4e"

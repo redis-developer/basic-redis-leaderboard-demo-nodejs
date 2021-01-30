@@ -26,7 +26,33 @@ Show how the redis works with NodeJS, Express.
 
 ## How it works?
 
-<!-- ![How it works](docs/screenshot001.png) -->
+![How it works](docs/screenshot001.png)
+
+
+<b>1. How the data is stored:</b>
+<ol>
+    <li>The company data is stored in a hash like below:
+      <pre>HSET "company:AAPL" symbol "AAPL" market_cap "2600000000000" country USA</pre>
+     </li>
+    <li>The Ranks are stored in a ZSET. 
+      <pre>ZADD companyLeaderboard 2600000000000 company:AAPL</pre>
+    </li>
+</ol>
+
+<br/>
+<b>2. How the data is accessed:</b>
+<ol>
+    <li>Top 10 companies: <pre>ZREVRANGE companyLeaderboard 0 9 WITHSCORES</pre> </li>
+    <li>All companies: <pre>ZREVRANGE companyLeaderboard 0 -1 WITHSCORES</pre> </li>
+    <li>Bottom 10 companies: <pre>ZRANGE companyLeaderboard 0 9 WITHSCORES</pre></li>
+    <li>Between rank 10 and 15: <pre>ZREVRANGE companyLeaderboard 9 14 WITHSCORES</pre></li>
+    <li>Show ranks of AAPL, FB and TSLA: <pre>ZSCORE companyLeaderBoard company:AAPL company:FB company:TSLA</pre> </li>
+    <!-- <li>Pagination: Show 1st 10 companies: <pre>ZSCAN 0 companyLeaderBoard COUNT 10 7.Pagination: Show next 10 companies: ZSCAN &lt;return value from the 1st 10 companies&gt; companyLeaderBoard COUNT 10 </li> -->
+    <li>Adding market cap to companies: <pre>ZINCRBY companyLeaderBoard 1000000000 "company:FB"</pre></li>
+    <li>Reducing market cap to companies: <pre>ZINCRBY companyLeaderBoard -1000000000 "company:FB"</pre></li>
+    <li>Companies over a Trillion: <pre>ZCOUNT companyLeaderBoard 1000000000000 +inf</pre> </li>
+    <li>Companies between 500 billion and 1 trillion: <pre>ZCOUNT companyLeaderBoard 500000000000 1000000000000</pre></li>
+</ol>
 
 ## How to run it locally?
 

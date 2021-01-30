@@ -1,0 +1,32 @@
+{
+    "app_name": "Basic Redis leaderboard example in Nodejs",
+    "description": "Showcases how to impliment leaderboard appliation in NodeJs",
+    "type": "Building Block",
+    "contributed_by": "Redis Labs",
+    "repo_url": "https://github.com/redis-developer/basic-redis-leaderboard-demo-nodejs",
+    "download_url": "https://github.com/redis-developer/basic-redis-leaderboard-demo-nodejs/archive/main.zip",
+    "hosted_url": "",
+    "quick_deploy": "true",
+    "deploy_buttons": [
+        {
+            "heroku": "https://heroku.com/deploy?template=https://github.com/redis-developer/basic-redis-leaderboard-demo-nodejs"
+        },
+        {
+            "vercel": "https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fredis-developer%2Fbasic-redis-leaderboard-demo-nodejs&env=REDIS_ENDPOINT_URI,REDIS_PASSWORD&envDescription=REDIS_ENDPOINT_URI%20is%20required%20at%20least%20to%20connect%20to%20Redis%20clouding%20server"
+        },
+        {
+            "Google": "https://deploy.cloud.run/?git_repo=https://github.com/redis-developer/basic-redis-leaderboard-demo-nodejs.git"
+        }
+    ],
+    "language": ["JavaScript"],
+    "redis_commands": ["HSET", "ZADD", "ZREVRANGE", "ZRANGE", "ZREVRANGE", "ZSCORE", "ZINCRBY", "ZCOUNT"],
+    "redis_features": ["leaderboard"],
+    "redis_modules": [],
+    "app_image_urls": [
+        "https://github.com/redis-developer/basic-redis-leaderboard-demo-nodejs/blob/main/docs/screenshot001.png?raw=true"
+    ],
+    "youtube_url": "",
+    "special_tags": [],
+    "verticals": ["Financial"],
+    "markdown": "https://raw.githubusercontent.com/redislabs-training/redis-sitesearch/master/README.md"
+}
