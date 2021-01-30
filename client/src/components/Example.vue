@@ -47,6 +47,7 @@
           dense
           outlined
           hide-details
+          style="background: #FFF"
         />
       </v-col>
       <v-col cols="8" class="text-right">
@@ -62,7 +63,7 @@
               outlined
             >
               <v-icon class="mr-2">mdi-cog-outline</v-icon>
-              Update Rank
+              <span style="color: #111; text-transform: initial;">Update Rank</span>
             </v-btn>
           </template>
         </rank-selection-modal>
