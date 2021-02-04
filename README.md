@@ -24,12 +24,13 @@ Show how the redis works with NodeJS, Express.
 </p>
 
 
-## How it works?
+
 
 ![How it works](docs/screenshot001.png)
 
 
-<b>1. How the data is stored:</b>
+# How it works?
+## 1. How the data is stored:
 <ol>
     <li>The company data is stored in a hash like below:
       <pre>HSET "company:AAPL" symbol "AAPL" market_cap "2600000000000" country USA</pre>
@@ -40,7 +41,8 @@ Show how the redis works with NodeJS, Express.
 </ol>
 
 <br/>
-<b>2. How the data is accessed:</b>
+
+## 2. How the data is accessed:
 <ol>
     <li>Top 10 companies: <pre>ZREVRANGE companyLeaderboard 0 9 WITHSCORES</pre> </li>
     <li>All companies: <pre>ZREVRANGE companyLeaderboard 0 -1 WITHSCORES</pre> </li>
