@@ -3,7 +3,12 @@
 
 Show how the redis works with NodeJS, Express.
 
+## Screenshots
+
+![How it works](docs/screenshot001.png)
+
 ## Try it out
+
 
 <p>
     <a href="https://heroku.com/deploy" target="_blank">
@@ -51,10 +56,6 @@ Show how the redis works with NodeJS, Express.
 <a href="https://github.com/GoogleCloudPlatform/cloud-run-button/issues/108#issuecomment-554572173">
 Problem with unsupported flags when deploying google cloud run button
 </a>
-
-## How it works?
-
-![How it works](docs/screenshot001.png)
 
 
 # How it works?
