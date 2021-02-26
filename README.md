@@ -51,7 +51,7 @@ Show how the redis works with NodeJS, Express.
 
 4.  Select vpc-connector and deploy application.
 
-![4  step](docs/4.png)
+![4 step](docs/4.png)
 
 <a href="https://github.com/GoogleCloudPlatform/cloud-run-button/issues/108#issuecomment-554572173">
 Problem with unsupported flags when deploying google cloud run button
@@ -87,7 +87,7 @@ Problem with unsupported flags when deploying google cloud run button
 
 ## How to run it locally?
 
-#### Copy `.env.sample` to create `.env`. And provide the values for environment variables
+#### Copy `.env.example` to create `.env`. And provide the values for environment variables
 
     - REDIS_ENDPOINT_URI: Redis server URI
     - REDIS_PASSWORD: Password to the server
@@ -96,11 +96,13 @@ Problem with unsupported flags when deploying google cloud run button
 
 ```sh
 cd client
-npm run serve
+yarn
+yarn serve
 ```
 
 #### Run backend
 
-``` sh
-npm start
+```sh
+yarn
+yarn dev
 ```

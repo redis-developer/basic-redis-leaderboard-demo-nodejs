@@ -6,7 +6,7 @@
 
     <div style="height: 50px" />
 
-    <h1 class="text-center" style="color: #444444;">Redis Leadboard Demo</h1>
+    <h1 class="text-center" style="color: #444444;">Redis Leaderboard Demo</h1>
 
     <div style="height: 50px" />
 

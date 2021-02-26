@@ -30,6 +30,8 @@ const seedDb = async (force) => {
       ]);
 
       client.hset([
+        `leaderboard:${company.symbol.toLowerCase()}`,
+        'symbol',
         company.symbol.toLowerCase(),
         'company',
         company.company,
