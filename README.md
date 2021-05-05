@@ -7,6 +7,12 @@ Show how the redis works with NodeJS, Express.
 
 ![How it works](docs/screenshot001.png)
 
+# Overview video
+
+Here's a short video that explains the project and how it uses Redis:
+
+[![Watch the video on YouTube](docs/YTThumbnail.png)](https://www.youtube.com/watch?v=GvLacDPaW80)
+
 ## Try it out
 
 
