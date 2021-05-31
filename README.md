@@ -5,13 +5,13 @@ Show how the redis works with NodeJS, Express.
 
 ## Screenshots
 
-![How it works](docs/screenshot001.png)
+![How it works](https://github.com/redis-developer/basic-redis-leaderboard-demo-nodejs/raw/master/docs/screenshot001.png)
 
 # Overview video
 
 Here's a short video that explains the project and how it uses Redis:
 
-[![Watch the video on YouTube](docs/YTThumbnail.png)](https://www.youtube.com/watch?v=zzinHxdZ34I)
+[![Watch the video on YouTube](https://github.com/redis-developer/basic-redis-leaderboard-demo-nodejs/raw/master/docs/YTThumbnail.png)](https://www.youtube.com/watch?v=zzinHxdZ34I)
 
 ## Try it out
 
@@ -45,19 +45,19 @@ Here's a short video that explains the project and how it uses Redis:
 
 1. Open link google cloud console.
 
-![1 step](docs/1.png)
+![1 step](https://github.com/redis-developer/basic-redis-leaderboard-demo-nodejs/raw/master/docs/1.png)
 
 2. Click "Edit and deploy new revision" button.
 
-![2 step](docs/2.png)
+![2 step](https://github.com/redis-developer/basic-redis-leaderboard-demo-nodejs/raw/master/docs/2.png)
 
 3. Add environment.
 
-![3 step](docs/3.png)
+![3 step](https://github.com/redis-developer/basic-redis-leaderboard-demo-nodejs/raw/master/docs/3.png)
 
 4.  Select vpc-connector and deploy application.
 
-![4 step](docs/4.png)
+![4 step](https://github.com/redis-developer/basic-redis-leaderboard-demo-nodejs/raw/master/docs/4.png)
 
 <a href="https://github.com/GoogleCloudPlatform/cloud-run-button/issues/108#issuecomment-554572173">
 Problem with unsupported flags when deploying google cloud run button
