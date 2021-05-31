@@ -23,10 +23,10 @@
     "redis_features": ["leaderboard"],
     "redis_modules": [],
     "app_image_urls": [
-        "https://github.com/redis-developer/basic-redis-leaderboard-demo-nodejs/blob/main/docs/screenshot001.png?raw=true"
+        "https://github.com/redis-developer/basic-redis-leaderboard-demo-nodejs/raw/master/docs/screenshot001.png"
     ],
     "youtube_url": "https://www.youtube.com/watch?v=zzinHxdZ34I",
     "special_tags": [],
     "verticals": ["Financial"],
-    "markdown": "https://raw.githubusercontent.com/redislabs-training/redis-sitesearch/master/README.md"
+    "markdown": "https://github.com/redis-developer/basic-redis-leaderboard-demo-nodejs/raw/master/README.md"
 }
