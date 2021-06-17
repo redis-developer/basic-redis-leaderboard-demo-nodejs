@@ -143,7 +143,7 @@ const BILLION = 1000 * 1000 * 1000;
 const MILLION = 1000 * 1000;
 
 const API_BASE = location.hostname === 'localhost'
-  ? 'http://localhost:8080/api'
+  ? 'http://localhost:5000/api'
   : location.origin + '/api'
 
 import RankSelectionModal from './RankSelectionModal'
