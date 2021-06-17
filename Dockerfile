@@ -8,5 +8,9 @@ RUN yarn
 
 COPY . .
 
-EXPOSE 8080
+ARG REDIS_URL_ADDRESS
+
+ENV REDIS_URL=$REDIS_URL_ADDRESS
+ENV PORT 8080
+
 CMD [ "node", "api/index.js" ]
