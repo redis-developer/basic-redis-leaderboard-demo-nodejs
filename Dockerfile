@@ -2,7 +2,7 @@ FROM node:12
 
 WORKDIR /usr/src/app
 
-COPY yarn.lock
+COPY yarn.lock .
 
 RUN yarn
 
