@@ -11,6 +11,6 @@ COPY . .
 ARG REDIS_ENDPOINT_URI
 
 
-ENV PORT 8080
+ARG PORT 
 
 CMD [ "node", "api/index.js" ]
