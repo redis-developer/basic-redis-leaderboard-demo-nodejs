@@ -8,5 +8,5 @@ RUN yarn
 
 COPY . .
 
-EXPOSE PORT
+EXPOSE 8080
 CMD [ "node", "api/index.js" ]
