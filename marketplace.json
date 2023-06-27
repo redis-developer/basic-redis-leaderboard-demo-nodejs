@@ -1,8 +1,8 @@
 {
     "app_name": "Basic Redis leaderboard example in Nodejs",
-    "description": "Showcases how to impliment leaderboard appliation in NodeJs",
+    "description": "Showcases how to implement leaderboard application in NodeJs",
     "type": "Building Block",
-    "contributed_by": "Redis Labs",
+    "contributed_by": "Redis",
     "repo_url": "https://github.com/redis-developer/basic-redis-leaderboard-demo-nodejs",
     "preview_image_url": "https://raw.githubusercontent.com/redis-developer/basic-redis-leaderboard-demo-nodejs/master/images/app_preview_image.png",
     "download_url": "https://github.com/redis-developer/basic-redis-leaderboard-demo-nodejs/archive/main.zip",
@@ -19,15 +19,30 @@
             "Google": "https://deploy.cloud.run/?git_repo=https://github.com/redis-developer/basic-redis-leaderboard-demo-nodejs.git"
         }
     ],
-    "language": ["JavaScript"],
-    "redis_commands": ["HSET", "ZADD", "ZREVRANGE", "ZRANGE", "ZREVRANGE", "ZSCORE", "ZINCRBY", "ZCOUNT"],
-    "redis_features": ["leaderboard"],
-    "redis_modules": [],
+    "language": [
+        "JavaScript"
+    ],
+    "redis_commands": [
+        "HSET",
+        "ZADD",
+        "ZREVRANGE",
+        "ZRANGE",
+        "ZREVRANGE",
+        "ZSCORE",
+        "ZINCRBY",
+        "ZCOUNT"
+    ],
+    "redis_use_cases": [
+        "leaderboard"
+    ],
+    "redis_features": [],
     "app_image_urls": [
         "https://github.com/redis-developer/basic-redis-leaderboard-demo-nodejs/raw/master/docs/screenshot001.png"
     ],
     "youtube_url": "https://www.youtube.com/watch?v=zzinHxdZ34I",
     "special_tags": [],
-    "verticals": ["Others"],
+    "verticals": [
+        "Others"
+    ],
     "markdown": "https://raw.githubusercontent.com/redis-developer/basic-redis-leaderboard-demo-nodejs/master/README.md"
 }
